@@ -28,7 +28,7 @@ public class SpringSecurityConfiguration {
         http.csrf().disable()
                 .authorizeHttpRequests(authorize ->
                     authorize.anyRequest().authenticated()
-                ).httpBasic(Customizer.withDefaults());
+                ).formLogin(Customizer.withDefaults());
         return http.build();
     }
 }
