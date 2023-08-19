@@ -6,4 +6,20 @@ server.port: 8242
 spring:
     application:
         name: auth-server
-
+#    security:
+#        user:
+#            name: test
+#            password: test
+    jpa:
+        show-sql: true
+        hibernate.ddl-auto : update
+        database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    datasource:
+        driver-class-name: org.sqlite.JDBC
+        url: jdbc:sqlite:D:/SQLiteStudio/AuthServer.db
+        username: admin
+        password: admin
+        
+hibernate.format_sql: true
+hibernate.hbm2ddl.auto: create-drop
+hibernate.show_sql: true
